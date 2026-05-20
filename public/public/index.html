@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DJ Booking Calendar</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>DJ Booking Calendar</h1>
+      <p>Only Friday & Saturday dates are shown for this bar.</p>
+      <p><a href="/download/project.zip" style="color:#a78bfa">Download Full Project (.zip)</a></p>
+    </header>
+
+    <section class="controls">
+      <button id="prevMonth">Previous Month</button>
+      <h2 id="monthLabel"></h2>
+      <button id="nextMonth">Next Month</button>
+    </section>
+
+    <section id="message" class="message"></section>
+    <section id="calendar" class="calendar"></section>
+
+    <section class="book-panel">
+      <h3>Book this date</h3>
+      <input id="selectedDate" type="text" placeholder="Selected date" readonly />
+      <input id="djName" type="text" placeholder="DJ Name" />
+      <button id="bookBtn">Book this date</button>
+    </section>
+
+    <section class="list-panel">
+      <h3>Booked Dates</h3>
+      <div id="bookedList"></div>
+    </section>
+
+    <section class="admin-panel">
+      <h3>Admin Login</h3>
+      <div class="admin-row">
+        <input id="adminPass" type="password" placeholder="Admin Password" />
+        <button id="adminLoginBtn">Login</button>
+      </div>
+      <div id="adminActions" class="hidden">
+        <button id="exportBtn">Export bookings (CSV)</button>
+        <button id="downloadSourceBtn">Download app (.zip)</button>
+        <div id="adminList"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
